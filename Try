@@ -1,0 +1,1 @@
+javascript:fetch("https://a2mbd3.github.io/Aincrad/a.js").then(r=>r.text()).then(eval)

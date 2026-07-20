@@ -1,25 +1,25 @@
 // ╔══════════════════════════════════════════════════════════╗
-// ║  AUTHOR: Abdullah Al Mamun                             ║
-// ║  GITHUB: @A2MBD3                                       ║
-// ║  NEBULA DYNAMIC (USERDATA UPGRADE)                     ║
-// ║  CREDITS: Abdullah Al Mamun (@A2MBD3)                  ║
-// ║  PORTFOLIO: a2mbd3.paged.dev                           ║
+// ║  AUTHOR: FF JOD 2X                             ║
+// ║  GITHUB: @freefire-jod-2x                                       ║
+// ║  JOD DYNAMIC (USERDATA UPGRADE)                     ║
+// ║  CREDITS: FF JOD 2X (@ff_jod_2x)                  ║
+// ║  PORTFOLIO: ff_jod_2x.paged.dev                           ║
 // ╚══════════════════════════════════════════════════════════╝
 
 (function () {
   "use strict";
 
   // ═══════════════════ APP INFO ═══════════════════
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
-  const APP_NAME = "NEBULA";
+  // Credit: FF JOD 2X (ff_jod_2x) - ff_jod_2x.paged.dev
+  const APP_NAME = "FF JOD";
   const APP_VERSION = "24.1";
   const APP_FULL_NAME = APP_NAME + " v" + APP_VERSION;
 
   // ═══════════════════ DEBUG LOGGER ═══════════════════
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   const DBG = {
     _logs: [],
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     log: function(tag, msg, data) {
       const entry = {
         time: new Date().toISOString().split('T')[1].split('.')[0],

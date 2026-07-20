@@ -67,8 +67,8 @@
   let USER_ID = 0;
   let directTarget = null;
   
-  if (typeof window.ABDULLAH_BOOKMARK_LOAD !== "undefined") {
-    const raw = window.FF JOD_BOOKMARK_LOAD;
+  if (typeof window.FF_JOD_BOOKMARK_LOAD !== "undefined") {
+    const raw = window.FF_JOD_BOOKMARK_LOAD;
     
     // Check if it's a target name string
     if (typeof raw === 'string') {

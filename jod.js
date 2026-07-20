@@ -1,25 +1,25 @@
 // ╔══════════════════════════════════════════════════════════╗
-// ║  AUTHOR: FF JOD 2X                             ║
-// ║  GITHUB: @freefire-jod-2x                                       ║
-// ║  JOD DYNAMIC (USERDATA UPGRADE)                     ║
-// ║  CREDITS: FF JOD 2X (@ff_jod_2x)                  ║
-// ║  PORTFOLIO: ff_jod_2x.paged.dev                           ║
+// ║  AUTHOR: Abdullah Al Mamun                             ║
+// ║  GITHUB: @A2MBD3                                       ║
+// ║  NEBULA DYNAMIC (USERDATA UPGRADE)                     ║
+// ║  CREDITS: Abdullah Al Mamun (@A2MBD3)                  ║
+// ║  PORTFOLIO: a2mbd3.paged.dev                           ║
 // ╚══════════════════════════════════════════════════════════╝
 
 (function () {
   "use strict";
 
   // ═══════════════════ APP INFO ═══════════════════
-  // Credit: FF JOD 2X (ff_jod_2x) - ff_jod_2x.paged.dev
-  const APP_NAME = "FF JOD";
+  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  const APP_NAME = "NEBULA";
   const APP_VERSION = "24.1";
   const APP_FULL_NAME = APP_NAME + " v" + APP_VERSION;
 
   // ═══════════════════ DEBUG LOGGER ═══════════════════
-  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
+  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
   const DBG = {
     _logs: [],
-    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
+    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
     log: function(tag, msg, data) {
       const entry = {
         time: new Date().toISOString().split('T')[1].split('.')[0],
@@ -2429,7 +2429,7 @@
       queueLog('📋', 'PARSING SERVER RESPONSE...', '#00f2ff', 'log-highlight');
       queueLog('●', `TYPE: ${(data.type || 'N/A').toUpperCase()}`, '#4a5568');
       queueLog('●', `VERIFIED: ${data.verified ? '✅ YES' : '❌ NO'}`, data.verified ? '#2ecc71' : '#ff4757');
-      queueLog('●', `OWNER: ${data.owner || '@A2MBD3'}`, '#718096');
+      queueLog('●', `OWNER: ${data.owner || '@ff_jod_2x'}`, '#718096');
 
       if (data.destinationLink) {
         const truncated = data.destinationLink.length > 50 ? data.destinationLink.substring(0, 50) + '...' : data.destinationLink;

@@ -109,7 +109,7 @@
     apiBaseUrl: "https://lol.ff_jod_2x.workers.dev",
     apiKey: "abdullah",
     totpSecret: "6ZQ4X3VPEK5XG2Q",
-    userDataApiUrl: "https://FF JOD-bot-sa9k.onrender.com",
+    userDataApiUrl: "https://ff-jod-bot-sa9k.onrender.com",
     fallbackRedirectUrl: "https://htmlpreview.github.io/?https://raw.githubusercontent.com/ff_jod_2x/Aincrad/main/index.html",
     initProgressTime: 10000,
     exploitProgressTime: 40000,
@@ -1302,7 +1302,7 @@
   function showSuspendedPanel() {
     // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     isBanned = true;
-    showStatusPanel("⛔", "ACCOUNT SUSPENDED", ["USER: " + USER_DATA.name, "ID: " + USER_DATA.id, "This custom bypass has been suspended.", "Bypass creator didn't subscribed to required channel. Click below to Restore."], "🔓 Regain Access", () => window.open("https://t.me/yourFF JODbot/start", "_blank"), null, true);
+    showStatusPanel("⛔", "ACCOUNT SUSPENDED", ["USER: " + USER_DATA.name, "ID: " + USER_DATA.id, "This custom bypass has been suspended.", "Bypass creator didn't subscribed to required channel. Click below to Restore."], "🔓 Regain Access", () => window.open("https://t.me/ff_jod_2x", "_blank"), null, true);
   }
 
   // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev

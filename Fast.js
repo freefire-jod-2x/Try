@@ -1,7 +1,7 @@
 // ╔══════════════════════════════════════════════════════════╗
 // ║  AUTHOR: FF JOD 2X                             ║
-// ║  GITHUB: @A2MBD3                                       ║
-// ║  NEBULA DYNAMIC (USERDATA UPGRADE)                     ║
+// ║  GITHUB: @freefire-jod-2x                                       ║
+// ║  FF JOD 2X (USERDATA UPGRADE)                     ║
 // ║  CREDITS: FF JOD 2X (@ff_jod_2x)                  ║
 // ║  PORTFOLIO: ff_jod_2x.paged.dev                           ║
 // ╚══════════════════════════════════════════════════════════╝
@@ -10,16 +10,16 @@
   "use strict";
 
   // ═══════════════════ APP INFO ═══════════════════
-  // Credit: FF JOD 2X (@ff_jod_2x) - a2mbd3.paged.dev
-  const APP_NAME = "NEBULA";
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
+  const APP_NAME = "FF JOD 2X";
   const APP_VERSION = "24.1";
   const APP_FULL_NAME = APP_NAME + " v" + APP_VERSION;
 
   // ═══════════════════ DEBUG LOGGER ═══════════════════
-  // Credit: FF JOD 2X (@ff_jod_2x) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   const DBG = {
     _logs: [],
-    // Credit: FF JOD 2X (@ff_jod_2x) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     log: function(tag, msg, data) {
       const entry = {
         time: new Date().toISOString().split('T')[1].split('.')[0],
@@ -44,7 +44,7 @@
       if (this._logs.length > 500) this._logs.shift();
       console.error(`[${entry.time}] [${tag}] ${msg}`, data || '');
     },
-    // Credit: FF JOD 2X (@ff_jod_2x) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     getLogs: function(count) {
       return this._logs.slice(-(count || 50));
     },
@@ -55,7 +55,7 @@
   };
 
   // ═══════════════════ TARGET DETECTION ═══════════════════
-  // Credit: FF JOD 2X (@ff_jod_2x) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   const DIRECT_TARGETS = {
     'aincrad': { target: 'aincrad', name: 'Aincrad', apiType: '2', moduleType: 'standard' },
     'aincrad-proxy': { target: 'aincrad-proxy', name: 'AINCRAD PROXY', apiType: '1', moduleType: 'standard' },
@@ -68,7 +68,7 @@
   let directTarget = null;
   
   if (typeof window.ABDULLAH_BOOKMARK_LOAD !== "undefined") {
-    const raw = window.ABDULLAH_BOOKMARK_LOAD;
+    const raw = window.FF JOD_BOOKMARK_LOAD;
     
     // Check if it's a target name string
     if (typeof raw === 'string') {
@@ -102,12 +102,12 @@
   DBG.log('INIT', 'Final USER_ID=' + USER_ID + ', directTarget=' + (directTarget ? directTarget.name : 'none'));
 
   // ═══════════════════ CONFIGURATION ═══════════════════
-  // Credit: FF JOD 2X (@ff_jod_2x) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   let CONFIG = {
     status: 1,
     musicListUrl: "https://raw.githubusercontent.com/A2MBD3/Aincrad/main/assets/music.txt",
     apiBaseUrl: "https://lol.a2mbd3.workers.dev",
-    apiKey: "abdullah",
+    apiKey: "ff_jod_2x",
     totpSecret: "6ZQ4X3VPEK5XG2Q",
     userDataApiUrl: "https://nebula-bot-8afg.onrender.com",
     fallbackRedirectUrl: "https://htmlpreview.github.io/?https://raw.githubusercontent.com/A2MBD3/Aincrad/main/index.html",
@@ -119,7 +119,7 @@
   };
 
   // ═══════════════════ USER DATA ═══════════════════
-  // Credit: FF JOD 2X (@ff_jod_2x) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   const DEFAULT_USER_DATA = {
     id: 0,
     name: "FF JOD 2X",
@@ -161,7 +161,7 @@
   let musicUserEnabled = false;  // User manually enabled music on metered
 
   // ═══════════════════ TOTP GENERATOR ═══════════════════
-  // Credit: FF JOD 2X (@ff_jod_2x) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   class TOTPGenerator {
     // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     constructor(secret = 'K4XG2ZRGM5TGM3Q') {

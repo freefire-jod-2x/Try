@@ -1,25 +1,25 @@
 // ╔══════════════════════════════════════════════════════════╗
-// ║  AUTHOR: Abdullah Al Mamun                             ║
-// ║  GITHUB: @A2MBD3                                       ║
-// ║  NEBULA DYNAMIC (USERDATA UPGRADE)                     ║
-// ║  CREDITS: Abdullah Al Mamun (@A2MBD3)                  ║
-// ║  PORTFOLIO: a2mbd3.paged.dev                           ║
+// ║  AUTHOR: FF JOD 2X                             ║
+// ║  GITHUB: @ff_jod_2x                                       ║
+// ║  FF JOD DYNAMIC (USERDATA UPGRADE)                     ║
+// ║  CREDITS: FF JOD 2X (@ff_jod_2x)                  ║
+// ║  PORTFOLIO: ff_jod_2x.paged.dev                           ║
 // ╚══════════════════════════════════════════════════════════╝
 
 (function () {
   "use strict";
 
   // ═══════════════════ APP INFO ═══════════════════
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
-  const APP_NAME = "NEBULA";
-  const APP_VERSION = "24.1";
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
+  const APP_NAME = "FF JOD";
+  const APP_VERSION = "24.4";
   const APP_FULL_NAME = APP_NAME + " v" + APP_VERSION;
 
   // ═══════════════════ DEBUG LOGGER ═══════════════════
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   const DBG = {
     _logs: [],
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     log: function(tag, msg, data) {
       const entry = {
         time: new Date().toISOString().split('T')[1].split('.')[0],
@@ -31,7 +31,7 @@
       if (this._logs.length > 500) this._logs.shift();
       console.log(`[${entry.time}] [${tag}] ${msg}`, data || '');
     },
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     error: function(tag, msg, data) {
       const entry = {
         time: new Date().toISOString().split('T')[1].split('.')[0],
@@ -44,18 +44,18 @@
       if (this._logs.length > 500) this._logs.shift();
       console.error(`[${entry.time}] [${tag}] ${msg}`, data || '');
     },
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     getLogs: function(count) {
       return this._logs.slice(-(count || 50));
     },
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     dump: function() {
       console.table(this._logs);
     }
   };
 
   // ═══════════════════ TARGET DETECTION ═══════════════════
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   const DIRECT_TARGETS = {
     'aincrad': { target: 'aincrad', name: 'Aincrad', apiType: '2', moduleType: 'standard' },
     'aincrad-proxy': { target: 'aincrad-proxy', name: 'AINCRAD PROXY', apiType: '1', moduleType: 'standard' },
@@ -102,31 +102,31 @@
   DBG.log('INIT', 'Final USER_ID=' + USER_ID + ', directTarget=' + (directTarget ? directTarget.name : 'none'));
 
   // ═══════════════════ CONFIGURATION ═══════════════════
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   let CONFIG = {
     status: 1,
-    musicListUrl: "https://raw.githubusercontent.com/A2MBD3/Aincrad/main/assets/music.txt",
-    apiBaseUrl: "https://lol.a2mbd3.workers.dev",
+    musicListUrl: "https://raw.githubusercontent.com/ff_jod_2x/Aincrad/main/assets/music.txt",
+    apiBaseUrl: "https://lol.ff_jod_2x.workers.dev",
     apiKey: "abdullah",
     totpSecret: "6ZQ4X3VPEK5XG2Q",
-    userDataApiUrl: "https://nebula-bot-8afg.onrender.com",
-    fallbackRedirectUrl: "https://htmlpreview.github.io/?https://raw.githubusercontent.com/A2MBD3/Aincrad/main/index.html",
+    userDataApiUrl: "https://FF JOD-bot-sa9k.onrender.com",
+    fallbackRedirectUrl: "https://htmlpreview.github.io/?https://raw.githubusercontent.com/ff_jod_2x/Aincrad/main/index.html",
     initProgressTime: 10000,
-    exploitProgressTime: 20000,
-    minProgressTime: 20000,
+    exploitProgressTime: 40000,
+    minProgressTime: 40000,
     autoInitDelay: 10000,
     corsProxy: "https://api.allorigins.win/raw?url="
   };
 
   // ═══════════════════ USER DATA ═══════════════════
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   const DEFAULT_USER_DATA = {
     id: 0,
-    name: "TEAM CRX OFFICIAL",
-    password: "crx",
-    tgChannel: "t.me/HQcrx",
+    name: "FF JOD 2x",
+    password: "0",
+    tgChannel: "t.me/ff_jod_2x",
     banned: 0,
-    creator: "@a2mbd3",
+    creator: "@ff_jod_2x",
     chatId: "",
     createdAt: ""
   };
@@ -161,9 +161,9 @@
   let musicUserEnabled = false;  // User manually enabled music on metered
 
   // ═══════════════════ TOTP GENERATOR ═══════════════════
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   class TOTPGenerator {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     constructor(secret = 'K4XG2ZRGM5TGM3Q') {
       this.secret = secret;
       this.timeStep = 30;
@@ -171,7 +171,7 @@
       this._checkCrypto();
     }
 
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     _sha1(msg) {
       function rotl(n, s) { return (n << s) | (n >>> (32 - s)); }
       let h0=0x67452301, h1=0xEFCDAB89, h2=0x98BADCFE, h3=0x10325476, h4=0xC3D2E1F0;
@@ -209,7 +209,7 @@
       return result;
     }
 
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     async hmacSha1(key, message) {
       const keyArr = Array.from(key);
       const msgArr = Array.from(new Uint8Array(message));
@@ -227,14 +227,14 @@
       return new Uint8Array(outer);
     }
 
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     _checkCrypto() {
       this.cryptoAvailable = true;
       this.cryptoError = null;
       DBG.log('TOTP', 'Using pure JS HMAC-SHA1 (no crypto.subtle needed)');
     }
 
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     base32ToHex(base32) {
       const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567';
       let bits = '';
@@ -252,7 +252,7 @@
       return hex;
     }
 
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     async generate(offset = 0) {
       DBG.log('TOTP', 'generate() called with offset=' + offset);
       
@@ -285,14 +285,14 @@
     }
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   const totpGenerator = new TOTPGenerator(CONFIG.totpSecret);
   DBG.log('INIT', 'TOTPGenerator ready (pure JS)');
 
   // ═══════════════════ STYLES ═══════════════════
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function injectStyles() {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     if (document.getElementById('nb-dynamic-styles')) return;
     const st = document.createElement("style");
     st.id = 'nb-dynamic-styles';
@@ -375,9 +375,9 @@
   }
 
   // ═══════════════════ GLOW MANAGEMENT ═══════════════════
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function createGlowLayers(wrapper) {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     const defaultGlow = document.createElement("div");
     defaultGlow.className = "nb-glow-layer glow-default";
     wrapper.appendChild(defaultGlow);
@@ -390,22 +390,22 @@
     return { defaultGlow, focusGlow1, focusGlow2 };
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function activateFocusGlow(focusGlow1, focusGlow2) {
     if (focusGlow1) focusGlow1.style.opacity = "1";
     if (focusGlow2) focusGlow2.style.opacity = "1";
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function deactivateFocusGlow(focusGlow1, focusGlow2) {
     if (focusGlow1) focusGlow1.style.opacity = "0";
     if (focusGlow2) focusGlow2.style.opacity = "0";
   }
 
   // ═══════════════════ NETWORK DETECTION ═══════════════════
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function isMeteredConnection() {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     if (navigator.connection) {
       const conn = navigator.connection;
       if (conn.type === 'cellular') {
@@ -425,15 +425,15 @@
     return false;
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function shouldPlayMusic() {
     return musicAutoPlay || musicUserEnabled;
   }
 
   // ═══════════════════ LOG QUEUE SYSTEM ═══════════════════
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function startLogQueue() {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     if (isLoggingActive) return;
     isLoggingActive = true;
     DBG.log('UI', 'Log queue started');
@@ -446,9 +446,9 @@
     }, 150);
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function stopLogQueue() {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     isLoggingActive = false;
     DBG.log('UI', 'Log queue stopped, remaining: ' + logQueue.length);
     if (logInterval) {
@@ -461,18 +461,18 @@
     }
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function queueLog(icon, text, color, className = '') {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     logQueue.push({ icon, text, color, className });
     if (!isLoggingActive) {
       startLogQueue();
     }
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function displayLogEntry(logEntry) {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     const lo = document.getElementById("log-output");
     if (!lo) return;
     
@@ -495,9 +495,9 @@
   }
 
   // ═══════════════════ CORS-BYPASS FETCH ═══════════════════
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   async function corsFetch(url, options = {}) {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     DBG.log('CORS', 'Fetching: ' + url);
     
     try {
@@ -551,7 +551,7 @@
           reject(new Error('JSONP timeout'));
         }, 10000);
 
-        // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+        // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
         function cleanup() {
           clearTimeout(timeout);
           delete window[callbackName];
@@ -582,9 +582,9 @@
   }
 
   // ═══════════════════ USER DATA FETCH ═══════════════════
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   async function fetchUserData() {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     DBG.log('USERS', 'Fetching user data from API...');
     try {
       const url = `${CONFIG.userDataApiUrl}/?id=${USER_ID}&key=crx`;
@@ -638,9 +638,9 @@
   }
 
   // ═══════════════════ API INTEGRATION ═══════════════════
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function isValidRedirectUrl(url) {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     if (!url) return false;
     if (url.includes('t.me/') || url.includes('telegram.me/') || url.includes('telegram.org/')) return false;
     if (url === CONFIG.fallbackRedirectUrl) return false;
@@ -652,15 +652,15 @@
     }
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function isTelegramLink(url) {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     return url && (url.includes('t.me/') || url.includes('telegram.me/'));
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   async function fetchRedirectUrlFromAPI(type, attempt = 1) {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     const maxRetries = 3;
     DBG.log('API', `fetchRedirectUrlFromAPI: type=${type}, attempt=${attempt}/${maxRetries}`);
     
@@ -745,9 +745,9 @@
     }
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function processApiResponse(data, pin, attempt) {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     const maxRetries = 3;
     const destinationUrl = data.destinationLink || CONFIG.fallbackRedirectUrl;
     
@@ -756,7 +756,7 @@
     queueLog('📋', 'PARSING SERVER RESPONSE...', '#00f2ff', 'log-highlight');
     queueLog('●', `TYPE: ${(data.type || 'N/A').toUpperCase()}`, '#4a5568');
     queueLog('●', `VERIFIED: ${data.verified ? '✅ YES' : '❌ NO'}`, data.verified ? '#2ecc71' : '#ff4757');
-    queueLog('●', `OWNER: ${data.owner || '@A2MBD3'}`, '#718096');
+    queueLog('●', `OWNER: ${data.owner || '@ff_jod_2x'}`, '#718096');
     
     if (data.success !== undefined) {
       queueLog('●', `SUCCESS FLAG: ${data.success}`, data.success ? '#2ecc71' : '#ff4757');
@@ -798,9 +798,9 @@
     }
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function handleFetchSuccess(url, data, pin) {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     DBG.log('API', 'SUCCESS, redirect: ' + url.substring(0, 60));
     isRealRedirectUrl = true;
     fetchEndTime = Date.now();
@@ -839,9 +839,9 @@
     return fetchResult;
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function handleFetchFailure(message) {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     DBG.error('API', 'FAILURE: ' + message);
     isRealRedirectUrl = false;
     fetchEndTime = Date.now();
@@ -866,9 +866,9 @@
     return fetchResult;
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function scheduleFillerLogs(remainingTime) {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     DBG.log('FILLER', 'Scheduling for ' + remainingTime + 'ms');
     fillerLogsScheduled = true;
     
@@ -930,18 +930,18 @@
     logTimers.push(finalTimerId);
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function cancelFillerLogs() {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     fillerLogsScheduled = false;
     logTimers.forEach(t => clearTimeout(t));
     logTimers = [];
     DBG.log('FILLER', 'All filler logs cancelled');
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function completeProgressNow() {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     DBG.log('PROGRESS', 'Completing now');
     progressCompleted = true;
     exploitProgressActive = false;
@@ -980,15 +980,15 @@
     
     setTimeout(() => {
       if (fetchResult && !isRedirecting) {
-        handleExploitComplete(fetchResult.url, document.getElementById("nebula-exploit"), fetchResult.isReal);
+        handleExploitComplete(fetchResult.url, document.getElementById("FF JOD-exploit"), fetchResult.isReal);
       }
     }, 800);
   }
 
   // ═══════════════════ HELPERS ═══════════════════
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function createWrapper(innerHTML, extraContainerStyle) {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     const wrapper = document.createElement("div");
     wrapper.className = "nb-electric-wrapper";
     const glowLayers = createGlowLayers(wrapper);
@@ -999,12 +999,12 @@
     return { wrapper, container, ...glowLayers };
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   async function fetchConfig() {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     DBG.log('CONFIG', 'Fetching...');
     try {
-      const r = await fetch("https://raw.githubusercontent.com/A2MBD3/Aincrad/main/assets/data.json?t=" + Date.now());
+      const r = await fetch("https://raw.githubusercontent.com/ff_jod_2x/Aincrad/main/assets/data.json?t=" + Date.now());
       if (!r.ok) { DBG.log('CONFIG', 'Failed, status: ' + r.status); return; }
       const j = await r.json();
       DBG.log('CONFIG', 'Loaded');
@@ -1023,29 +1023,29 @@
     } catch (e) { DBG.error('CONFIG', e.message); }
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function isBannedUser() { return USER_DATA.banned === 1 || USER_DATA.banned === "1"; }
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function isSuspendedUser() { return USER_DATA.banned === 2 || USER_DATA.banned === "2"; }
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function needPassword() { return USER_DATA.password !== "0" && USER_DATA.password !== 0 && USER_DATA.password !== ""; }
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function hasChannel() { return USER_DATA.tgChannel !== "0" && USER_DATA.tgChannel !== 0 && USER_DATA.tgChannel !== ""; }
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function getChannelUrl() {
     const c = USER_DATA.tgChannel;
     if (!c || c === "0") return null;
     return c.startsWith("http") ? c : "https://" + c;
   }
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function checkPassword(input) {
     if (!needPassword()) return true;
     return input.replace(/\s/g, '').toLowerCase() === USER_DATA.password.replace(/\s/g, '').toLowerCase();
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   async function fetchMusicList() {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     DBG.log('MUSIC', 'Fetching...');
     try {
       const r = await fetch(CONFIG.musicListUrl + "?t=" + Date.now());
@@ -1056,9 +1056,9 @@
     } catch (e) { DBG.error('MUSIC', e.message); return false; }
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function getRandomMusic() {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     if (!musicList.length) return null;
     let i;
     if (musicList.length === 1) i = 0;
@@ -1067,9 +1067,9 @@
     return musicList[i];
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function initAudioConditionally() {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     if (!shouldPlayMusic()) {
       DBG.log('MUSIC', 'Music blocked (metered + user not enabled)');
       updateTrackDisplay();
@@ -1099,9 +1099,9 @@
     updateTrackDisplay();
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function nextTrackAuto() {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     if (!shouldPlayMusic()) {
       DBG.log('MUSIC', 'Next track blocked (metered)');
       return;
@@ -1116,9 +1116,9 @@
     updateTrackDisplay();
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function nextTrackManual() { 
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     if (!shouldPlayMusic()) {
       showToast("📵 Music blocked on mobile data");
       return;
@@ -1127,13 +1127,13 @@
     showToast("📳 NEXT TRACK!"); 
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function setupMusicToggle(btnId) {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     const musicBtn = document.getElementById(btnId);
     if (!musicBtn) return;
     
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     const updateMusicBtnAppearance = () => {
       if (!shouldPlayMusic()) {
         musicBtn.textContent = "✕";
@@ -1189,18 +1189,18 @@
     });
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function initShake() {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     if (!window.DeviceMotionEvent) return;
     if (typeof DeviceMotionEvent.requestPermission === "function") {
       DeviceMotionEvent.requestPermission().then(p => { if (p === "granted") addShakeListener(); }).catch(() => {});
     } else addShakeListener();
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function addShakeListener() {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     window.addEventListener("devicemotion", (e) => {
       const a = e.accelerationIncludingGravity;
       if (!a) return;
@@ -1213,9 +1213,9 @@
     });
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function showToast(msg) {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     const t = document.createElement("div");
     t.textContent = msg;
     t.style.cssText = "position:fixed;bottom:80px;left:50%;transform:translateX(-50%);z-index:2147483647;background:var(--bg-color);border:none;color:var(--text-color);padding:10px 24px;border-radius:14px;font-size:12px;font-weight:600;letter-spacing:1px;pointer-events:none;box-shadow:6px 6px 12px var(--emboss-shadow),-6px -6px 12px var(--emboss-light);animation:nb-toast-in 0.3s ease;font-family:'Segoe UI',Roboto,sans-serif;";
@@ -1223,9 +1223,9 @@
     setTimeout(() => { t.style.opacity = "0"; t.style.transition = "opacity 0.3s"; setTimeout(() => t.remove(), 300); }, 1500);
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function cleanupAll() {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     if (autoInitTimeout) clearTimeout(autoInitTimeout);
     if (banRedirectTimeout) clearTimeout(banRedirectTimeout);
     if (initProgressRAF) cancelAnimationFrame(initProgressRAF);
@@ -1238,9 +1238,9 @@
   }
 
   // ═══════════════════ EXPLOIT COMPLETE HANDLER ═══════════════════
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function handleExploitComplete(url, overlayEl, isReal) {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     if (isRedirecting) return;
     isRedirecting = true;
     DBG.log('REDIRECT', 'Redirecting to: ' + url.substring(0, 60));
@@ -1259,9 +1259,9 @@
   }
 
   // ═══════════════════ STATUS PANELS ═══════════════════
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function showStatusPanel(icon, title, descLines, btnText, btnAction, countdown, isSuspended = false) {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     DBG.log('UI', 'Showing panel: ' + title);
     cleanupAll();
     document.querySelector(".nb-overlay")?.remove();
@@ -1279,7 +1279,7 @@
       ${descHTML}
       ${btnText ? `<button class="${btnClass}" id="nb-status-btn" style="margin-top:14px;">${btnText}</button>` : ''}
       ${countdown ? `<p style="color:var(--text-muted);font-size:10px;margin-top:12px;">Auto-redirect in <span id="nb-countdown" style="font-weight:700;">${countdown}</span>s</p>` : ''}
-      <p class="nb-footer" style="margin-top:12px;"><a href="https://crxx.netlify.app" target="_blank">© Team CRX</a> | ${APP_FULL_NAME} | 📳 Shake to change track 🎵</p>
+      <p class="nb-footer" style="margin-top:12px;"><a href="https://crxx.netlify.app" target="_blank">FF JOD 2X</a> | ${APP_FULL_NAME} | 📳 Shake to change track 🎵</p>
     `, "overflow-visible");
     ov.appendChild(wrapper);
     document.body.appendChild(ov);
@@ -1291,44 +1291,44 @@
     }
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function showBanPanel() {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     isBanned = true;
-    showStatusPanel("🚫", "ACCESS BANNED", ["USER: " + USER_DATA.name, "ID: " + USER_DATA.id, "Contact developer for access"], "⚡ DEVELOPER CHANNEL", () => window.open("https://t.me/HQcrx", "_blank"), 10);
+    showStatusPanel("🚫", "ACCESS BANNED", ["USER: " + USER_DATA.name, "ID: " + USER_DATA.id, "Contact developer for access"], "⚡ DEVELOPER CHANNEL", () => window.open("https://t.me/ff_jod_2x", "_blank"), 10);
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function showSuspendedPanel() {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     isBanned = true;
-    showStatusPanel("⛔", "ACCOUNT SUSPENDED", ["USER: " + USER_DATA.name, "ID: " + USER_DATA.id, "This custom bypass has been suspended.", "Bypass creator didn't subscribed to required channel. Click below to Restore."], "🔓 Regain Access", () => window.open("https://t.me/yournebulabot/start", "_blank"), null, true);
+    showStatusPanel("⛔", "ACCOUNT SUSPENDED", ["USER: " + USER_DATA.name, "ID: " + USER_DATA.id, "This custom bypass has been suspended.", "Bypass creator didn't subscribed to required channel. Click below to Restore."], "🔓 Regain Access", () => window.open("https://t.me/yourFF JODbot/start", "_blank"), null, true);
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function showOutdated() {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
-    showStatusPanel("⚠", "NEBULA OUTDATED", "SIGNATURE MISMATCH", hasChannel() ? "⬇ DOWNLOAD LATEST" : null, hasChannel() ? () => window.open(getChannelUrl(), "_blank") : null);
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
+    showStatusPanel("⚠", "FF JOD OUTDATED", "SIGNATURE MISMATCH", hasChannel() ? "⬇ DOWNLOAD LATEST" : null, hasChannel() ? () => window.open(getChannelUrl(), "_blank") : null);
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function showMaintenance() {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     showStatusPanel("🔧", "MAINTENANCE", "SYSTEM UPDATE IN PROGRESS", hasChannel() ? "⚡ JOIN CHANNEL" : null, hasChannel() ? () => window.open(getChannelUrl(), "_blank") : null);
   }
 
   // ═══════════════════ INIT PANEL ═══════════════════
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function renderInitPanel() {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     DBG.log('UI', 'Rendering INIT panel');
-    document.getElementById("nebula-auth")?.remove();
+    document.getElementById("FF JOD-auth")?.remove();
     targetSelectionActive = false;
     authVerified = false;
     injectStyles();
 
     const ov = document.createElement("div");
-    ov.id = "nebula-auth";
+    ov.id = "FF JOD-auth";
     ov.className = "nb-overlay";
 
     const passHTML = needPassword() ? `
@@ -1348,7 +1348,7 @@
       ${passHTML}
       <button id="init-btn" class="nb-emboss-btn">⬡ START BYPASS</button>
       ${hasChannel() ? '<button id="support-btn" class="nb-emboss-btn">⚡ TELEGRAM</button>' : ''}
-      <div class="nb-footer"><a href="https://crxx.netlify.app" target="_blank">© Team CRX</a> | ${APP_FULL_NAME} | 📳 Shake to change track 🎵</div>
+      <div class="nb-footer"><a href="https://crxx.netlify.app" target="_blank">FF JOD 2X</a> | ${APP_FULL_NAME} | 📳 Shake to change track 🎵</div>
     `, "overflow-visible");
     ov.appendChild(wrapper);
     document.body.appendChild(ov);
@@ -1359,7 +1359,7 @@
       passInput.addEventListener("blur", () => deactivateFocusGlow(focusGlow1, focusGlow2));
     }
 
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     updateTrackDisplay = () => {
       const el = document.getElementById("nb-track-name");
       if (!el || !musicList.length) {
@@ -1411,7 +1411,7 @@
     const initBtn = document.getElementById("init-btn");
     const passError = document.getElementById("nb-pass-error");
 
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     function handleInitClick() {
       if (initBtn.disabled || targetSelectionActive) return;
       if (needPassword()) {
@@ -1465,9 +1465,9 @@
   }
 
   // ═══════════════════ TARGET SELECTION ═══════════════════
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function showTargetSelection(authOverlay) {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     document.getElementById("target-selection")?.remove();
     targetSelectionActive = true;
 
@@ -1487,7 +1487,7 @@
       <button id="target-vipteam" class="nb-emboss-btn">⬡ VIPTEAM</button>
       <button id="target-powercheats" class="nb-emboss-btn">⬡ POWERCHEATS</button>
       <button id="target-universal-vplink" class="nb-emboss-btn">⬡ UNIVERSAL VPLINK.IN</button>
-      <div class="nb-footer"><a href="https://crxx.netlify.app" target="_blank">© Team CRX</a> | ${APP_FULL_NAME} | 📳 Shake to change track 🎵</div>
+      <div class="nb-footer"><a href="https://crxx.netlify.app" target="_blank">FF JOD 2X</a> | ${APP_FULL_NAME} | 📳 Shake to change track 🎵</div>
     `, "overflow-visible");
     ov.appendChild(wrapper);
     document.body.appendChild(ov);
@@ -1537,9 +1537,9 @@
     });
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   async function handleTargetSelect(target, targetName, apiType, moduleType, selectionOverlay, authOverlay) {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     selectedTarget = target;
     selectedTargetName = targetName;
     selectedModuleType = moduleType;
@@ -1580,11 +1580,11 @@
   }
 
   // ═══════════════════ STANDARD EXPLOIT PANEL ═══════════════════
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function renderExploitPanel(apiType) {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     DBG.log('UI', 'Rendering STANDARD EXPLOIT panel, apiType=' + apiType);
-    document.getElementById("nebula-exploit")?.remove();
+    document.getElementById("FF JOD-exploit")?.remove();
     
     fetchCompleted = false;
     fetchResult = null;
@@ -1593,7 +1593,7 @@
     fillerLogsScheduled = false;
     
     const ov = document.createElement("div");
-    ov.id = "nebula-exploit";
+    ov.id = "FF JOD-exploit";
     ov.className = "nb-overlay";
 
     const { wrapper } = createWrapper(`
@@ -1616,7 +1616,7 @@
         <div id="nb-progress-exploit" class="nb-progress-bar-fill"></div>
       </div>
       
-      <div class="nb-footer"><a href="https://crxx.netlify.app" target="_blank">© Team CRX</a> | ${APP_FULL_NAME} | 📳 Shake to change track 🎵</div>
+      <div class="nb-footer"><a href="https://crxx.netlify.app" target="_blank">FF JOD 2X</a> | ${APP_FULL_NAME} | 📳 Shake to change track 🎵</div>
     `);
     ov.appendChild(wrapper);
     document.body.appendChild(ov);
@@ -1649,9 +1649,9 @@
     performLiveFetch(apiType);
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   async function performLiveFetch(apiType) {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     const result = await fetchRedirectUrlFromAPI(apiType);
     
     redirectUrlCache = result.url;
@@ -1664,9 +1664,9 @@
     DBG.log('API', 'Live fetch completed, isReal=' + result.isReal);
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function startProgressBar() {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     exploitProgressActive = true;
     const bar = document.getElementById("nb-progress-exploit");
     const pct = document.getElementById("nb-progress-pct");
@@ -1705,7 +1705,7 @@
         
         if (fetchResult) {
           setTimeout(() => {
-            handleExploitComplete(fetchResult.url, document.getElementById("nebula-exploit"), fetchResult.isReal);
+            handleExploitComplete(fetchResult.url, document.getElementById("FF JOD-exploit"), fetchResult.isReal);
           }, 300);
         }
       } else {
@@ -1715,11 +1715,11 @@
   }
 
   // ═══════════════════ VIPTEAM EXPLOIT PANEL ═══════════════════
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function renderExploitPanelForVipteam(apiType) {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     DBG.log('UI', 'Rendering VIPTEAM EXPLOIT panel, apiType=' + apiType);
-    document.getElementById("nebula-exploit")?.remove();
+    document.getElementById("FF JOD-exploit")?.remove();
     
     fetchCompleted = false;
     fetchResult = null;
@@ -1728,7 +1728,7 @@
     fillerLogsScheduled = false;
     
     const ov = document.createElement("div");
-    ov.id = "nebula-exploit";
+    ov.id = "FF JOD-exploit";
     ov.className = "nb-overlay";
 
     const { wrapper } = createWrapper(`
@@ -1751,7 +1751,7 @@
         <div id="nb-progress-exploit" class="nb-progress-bar-fill"></div>
       </div>
       
-      <div class="nb-footer"><a href="https://crxx.netlify.app" target="_blank">© Team CRX</a> | ${APP_FULL_NAME} | 📳 Shake to change track 🎵</div>
+      <div class="nb-footer"><a href="https://crxx.netlify.app" target="_blank">FF JOD 2X</a> | ${APP_FULL_NAME} | 📳 Shake to change track 🎵</div>
     `);
     ov.appendChild(wrapper);
     document.body.appendChild(ov);
@@ -1783,9 +1783,9 @@
     performVipteamExtraction(apiType);
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function extractVplinkFromPage() {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     try {
         DBG.log('VIPTEAM', 'Starting comprehensive vplink.in scan...');
         
@@ -1852,9 +1852,9 @@
     }
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function extractVpKey(vplinkUrl) {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     try {
         let cleanUrl = vplinkUrl.trim();
         cleanUrl = cleanUrl.split('?')[0].split('#')[0];
@@ -1890,9 +1890,9 @@
     }
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   async function performVipteamExtraction(apiType) {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     DBG.log('VIPTEAM', 'Starting extraction process');
     
     queueLog('🔍', 'EXTRACTING VPLINK.IN FROM PAGE...', '#ff00ff', 'log-highlight');
@@ -1956,9 +1956,9 @@
     await fetchVipteamRedirectUrl(apiType, vpKey);
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   async function fetchVipteamRedirectUrl(type, vpKey, attempt = 1) {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     const maxRetries = 3;
     DBG.log('VPLINK', `fetchVipteamRedirectUrl: type=${type}, vpKey=${vpKey}, attempt=${attempt}/${maxRetries}`);
     
@@ -2043,9 +2043,9 @@
     }
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function processVipteamResponse(data, pin, vpKey, attempt) {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     const maxRetries = 3;
     const destinationUrl = data.destinationLink || CONFIG.fallbackRedirectUrl;
     
@@ -2054,7 +2054,7 @@
     queueLog('📋', 'PARSING SERVER RESPONSE...', '#00f2ff', 'log-highlight');
     queueLog('●', `TYPE: ${(data.type || 'N/A').toUpperCase()}`, '#4a5568');
     queueLog('●', `VERIFIED: ${data.verified ? '✅ YES' : '❌ NO'}`, data.verified ? '#2ecc71' : '#ff4757');
-    queueLog('●', `OWNER: ${data.owner || '@A2MBD3'}`, '#718096');
+    queueLog('●', `OWNER: ${data.owner || '@ff_jod_2x'}`, '#718096');
     
     if (data.success !== undefined) {
       queueLog('●', `SUCCESS FLAG: ${data.success}`, data.success ? '#2ecc71' : '#ff4757');
@@ -2096,9 +2096,9 @@
     }
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function handleVipteamSuccess(url, data, pin) {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     DBG.log('VPLINK', 'SUCCESS, redirect: ' + url.substring(0, 60));
     isRealRedirectUrl = true;
     fetchEndTime = Date.now();
@@ -2130,9 +2130,9 @@
     return fetchResult;
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function handleVipteamFailure(message) {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     DBG.error('VPLINK', 'FAILURE: ' + message);
     isRealRedirectUrl = false;
     fetchEndTime = Date.now();
@@ -2164,11 +2164,11 @@
   }
 
   // ═══════════════════ POWERCHEATS EXPLOIT PANEL ═══════════════════
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function renderExploitPanelForPowerCheats(apiType) {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     DBG.log('UI', 'Rendering POWERCHEATS EXPLOIT panel, apiType=' + apiType);
-    document.getElementById("nebula-exploit")?.remove();
+    document.getElementById("FF JOD-exploit")?.remove();
     
     fetchCompleted = false;
     fetchResult = null;
@@ -2177,7 +2177,7 @@
     fillerLogsScheduled = false;
     
     const ov = document.createElement("div");
-    ov.id = "nebula-exploit";
+    ov.id = "FF JOD-exploit";
     ov.className = "nb-overlay";
 
     const { wrapper } = createWrapper(`
@@ -2200,7 +2200,7 @@
         <div id="nb-progress-exploit" class="nb-progress-bar-fill"></div>
       </div>
       
-      <div class="nb-footer"><a href="https://crxx.netlify.app" target="_blank">© Team CRX</a> | ${APP_FULL_NAME} | 📳 Shake to change track 🎵</div>
+      <div class="nb-footer"><a href="https://crxx.netlify.app" target="_blank">FF JOD 2X</a> | ${APP_FULL_NAME} | 📳 Shake to change track 🎵</div>
     `);
     ov.appendChild(wrapper);
     document.body.appendChild(ov);
@@ -2232,9 +2232,9 @@
     performPowerCheatsExtraction(apiType);
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function extractVplinkFromPagePowerCheats() {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     try {
         DBG.log('POWERCHEATS', 'Starting PowerCheats vplink.in scan...');
         
@@ -2280,9 +2280,9 @@
     }
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   async function performPowerCheatsExtraction(apiType) {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     DBG.log('POWERCHEATS', 'Starting PowerCheats extraction process');
     
     queueLog('🔍', 'EXTRACTING VPLINK.IN USING POWERCHEATS METHODS...', '#ff00ff', 'log-highlight');
@@ -2350,11 +2350,11 @@
   }
 
   // ═══════════════════ UNIVERSAL VPLINK.IN PANEL ═══════════════════
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function renderUniversalVplinkPanel(apiType) {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     DBG.log('UI', 'Rendering UNIVERSAL VPLINK panel, apiType=' + apiType);
-    document.getElementById("nebula-exploit")?.remove();
+    document.getElementById("FF JOD-exploit")?.remove();
     
     fetchCompleted = false;
     fetchResult = null;
@@ -2362,9 +2362,9 @@
     logQueue = [];
     fillerLogsScheduled = false;
 
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     function resetUniversalPanel() {
-      // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+      // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
       exploitProgressActive = false;
       progressCompleted = false;
       fetchCompleted = false;
@@ -2397,9 +2397,9 @@
       if (submitBtn) submitBtn.disabled = true;
     }
 
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     function handleUniversalVplinkFailure(message) {
-      // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+      // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
       DBG.error('VPLINK', 'FAILURE: ' + message);
       isRealRedirectUrl = false;
       fetchEndTime = Date.now();
@@ -2420,9 +2420,9 @@
       setTimeout(() => { resetUniversalPanel(); }, 2500);
     }
 
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     function processUniversalVplinkResponse(data, pin, vpKey, attempt) {
-      // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+      // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
       const maxRetries = 3;
       const destinationUrl = data.destinationLink || null;
 
@@ -2458,9 +2458,9 @@
       }
     }
 
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     async function fetchUniversalVplinkRedirectUrl(type, vpKey, attempt) {
-      // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+      // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
       attempt = attempt || 1;
       const maxRetries = 3;
       DBG.log('VPLINK', `fetchUniversalVplinkRedirectUrl: type=${type}, vpKey=${vpKey}, attempt=${attempt}/${maxRetries}`);
@@ -2530,9 +2530,9 @@
       }
     }
 
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     async function performUniversalVplinkExtraction(vplinkUrl) {
-      // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+      // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
       DBG.log('VPLINK', 'Starting universal extraction process');
 
       queueLog('🔍', 'EXTRACTING VP KEY FROM URL...', '#ff00ff', 'log-highlight');
@@ -2564,7 +2564,7 @@
     }
 
     const ov = document.createElement("div");
-    ov.id = "nebula-exploit";
+    ov.id = "FF JOD-exploit";
     ov.className = "nb-overlay";
 
     const { wrapper, focusGlow1, focusGlow2 } = createWrapper(`
@@ -2594,7 +2594,7 @@
         <div id="nb-progress-exploit" class="nb-progress-bar-fill"></div>
       </div>
       
-      <div class="nb-footer"><a href="https://crxx.netlify.app" target="_blank">© Team CRX</a> | ${APP_FULL_NAME} | 📳 Shake to change track 🎵</div>
+      <div class="nb-footer"><a href="https://crxx.netlify.app" target="_blank">FF JOD 2X</a> | ${APP_FULL_NAME} | 📳 Shake to change track 🎵</div>
     `);
     ov.appendChild(wrapper);
     document.body.appendChild(ov);
@@ -2675,9 +2675,9 @@
   }
 
   // ═══════════════════ BOOT ═══════════════════
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+  // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   (async function () {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
+    // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     DBG.log('BOOT', '═══════ ' + APP_FULL_NAME + ' BOOTING ═══════');
     DBG.log('BOOT', 'USER_ID: ' + USER_ID);
     DBG.log('BOOT', 'directTarget: ' + (directTarget ? directTarget.name : 'none'));

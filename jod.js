@@ -1,7 +1,7 @@
 // ╔══════════════════════════════════════════════════════════╗
 // ║  AUTHOR: FF JOD 2X                             ║
 // ║  GITHUB: @ff_jod_2x                                       ║
-// ║  FF JOD DYNAMIC (USERDATA UPGRADE)                     ║
+// ║  NEBULA DYNAMIC (USERDATA UPGRADE)                     ║
 // ║  CREDITS: FF JOD 2X (@ff_jod_2x)                  ║
 // ║  PORTFOLIO: ff_jod_2x.paged.dev                           ║
 // ╚══════════════════════════════════════════════════════════╝
@@ -11,8 +11,8 @@
 
   // ═══════════════════ APP INFO ═══════════════════
   // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
-  const APP_NAME = "FF JOD";
-  const APP_VERSION = "24.4";
+  const APP_NAME = "NEBULA";
+  const APP_VERSION = "25.0";
   const APP_FULL_NAME = APP_NAME + " v" + APP_VERSION;
 
   // ═══════════════════ DEBUG LOGGER ═══════════════════
@@ -105,12 +105,12 @@
   // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   let CONFIG = {
     status: 1,
-    musicListUrl: "https://raw.githubusercontent.com/ff_jod_2x/Aincrad/main/assets/music.txt",
-    apiBaseUrl: "https://lol.ff_jod_2x.workers.dev",
+    musicListUrl: "https://raw.githubusercontent.com/A2MBD3/Aincrad/main/assets/music.txt",
+    apiBaseUrl: "https://lol.a2mbd3.workers.dev",
     apiKey: "abdullah",
-    totpSecret: "6ZQ4X3VPEK5XG2Q",
-    userDataApiUrl: "https://ff-jod-bot-sa9k.onrender.com",
-    fallbackRedirectUrl: "https://htmlpreview.github.io/?https://raw.githubusercontent.com/ff_jod_2x/Aincrad/main/index.html",
+    totpSecret: "DONOTSTOLEBROJCFFVGCDDCXSG",
+    userDataApiUrl: "https://nebula-bot-sa9k.onrender.com",
+    fallbackRedirectUrl: "crxx.pages.dev",
     initProgressTime: 10000,
     exploitProgressTime: 40000,
     minProgressTime: 40000,
@@ -122,11 +122,11 @@
   // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   const DEFAULT_USER_DATA = {
     id: 0,
-    name: "FF JOD 2x",
+    name: "TEAM CRX OFFICIAL",
     password: "0",
-    tgChannel: "t.me/ff_jod_2x",
+    tgChannel: "t.me/HQcrx",
     banned: 0,
-    creator: "@ff_jod_2x",
+    creator: "@a2mbd3",
     chatId: "",
     createdAt: ""
   };
@@ -756,7 +756,7 @@
     queueLog('📋', 'PARSING SERVER RESPONSE...', '#00f2ff', 'log-highlight');
     queueLog('●', `TYPE: ${(data.type || 'N/A').toUpperCase()}`, '#4a5568');
     queueLog('●', `VERIFIED: ${data.verified ? '✅ YES' : '❌ NO'}`, data.verified ? '#2ecc71' : '#ff4757');
-    queueLog('●', `OWNER: ${data.owner || '@ff_jod_2x'}`, '#718096');
+    queueLog('●', `OWNER: ${data.owner || '@A2MBD3'}`, '#718096');
     
     if (data.success !== undefined) {
       queueLog('●', `SUCCESS FLAG: ${data.success}`, data.success ? '#2ecc71' : '#ff4757');
@@ -980,7 +980,7 @@
     
     setTimeout(() => {
       if (fetchResult && !isRedirecting) {
-        handleExploitComplete(fetchResult.url, document.getElementById("FF JOD-exploit"), fetchResult.isReal);
+        handleExploitComplete(fetchResult.url, document.getElementById("nebula-exploit"), fetchResult.isReal);
       }
     }, 800);
   }
@@ -1004,7 +1004,7 @@
     // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     DBG.log('CONFIG', 'Fetching...');
     try {
-      const r = await fetch("https://raw.githubusercontent.com/ff_jod_2x/Aincrad/main/assets/data.json?t=" + Date.now());
+      const r = await fetch("https://raw.githubusercontent.com/A2MBD3/Aincrad/main/assets/data.json?t=" + Date.now());
       if (!r.ok) { DBG.log('CONFIG', 'Failed, status: ' + r.status); return; }
       const j = await r.json();
       DBG.log('CONFIG', 'Loaded');
@@ -1279,7 +1279,7 @@
       ${descHTML}
       ${btnText ? `<button class="${btnClass}" id="nb-status-btn" style="margin-top:14px;">${btnText}</button>` : ''}
       ${countdown ? `<p style="color:var(--text-muted);font-size:10px;margin-top:12px;">Auto-redirect in <span id="nb-countdown" style="font-weight:700;">${countdown}</span>s</p>` : ''}
-      <p class="nb-footer" style="margin-top:12px;"><a href="https://crxx.netlify.app" target="_blank">FF JOD 2X</a> | ${APP_FULL_NAME} | 📳 Shake to change track 🎵</p>
+      <p class="nb-footer" style="margin-top:12px;"><a href="https://crxx.netlify.app" target="_blank">© Team CRX</a> | ${APP_FULL_NAME} | 📳 Shake to change track 🎵</p>
     `, "overflow-visible");
     ov.appendChild(wrapper);
     document.body.appendChild(ov);
@@ -1295,20 +1295,20 @@
   function showBanPanel() {
     // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     isBanned = true;
-    showStatusPanel("🚫", "ACCESS BANNED", ["USER: " + USER_DATA.name, "ID: " + USER_DATA.id, "Contact developer for access"], "⚡ DEVELOPER CHANNEL", () => window.open("https://t.me/ff_jod_2x", "_blank"), 10);
+    showStatusPanel("🚫", "ACCESS BANNED", ["USER: " + USER_DATA.name, "ID: " + USER_DATA.id, "Contact developer for access"], "⚡ DEVELOPER CHANNEL", () => window.open("https://t.me/HQcrx", "_blank"), 10);
   }
 
   // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function showSuspendedPanel() {
     // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     isBanned = true;
-    showStatusPanel("⛔", "ACCOUNT SUSPENDED", ["USER: " + USER_DATA.name, "ID: " + USER_DATA.id, "This custom bypass has been suspended.", "Bypass creator didn't subscribed to required channel. Click below to Restore."], "🔓 Regain Access", () => window.open("https://t.me/ff_jod_2x", "_blank"), null, true);
+    showStatusPanel("⛔", "ACCOUNT SUSPENDED", ["USER: " + USER_DATA.name, "ID: " + USER_DATA.id, "This custom bypass has been suspended.", "Bypass creator didn't subscribed to required channel. Click below to Restore."], "🔓 Regain Access", () => window.open("https://t.me/yournebulabot/start", "_blank"), null, true);
   }
 
   // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   function showOutdated() {
     // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
-    showStatusPanel("⚠", "FF JOD OUTDATED", "SIGNATURE MISMATCH", hasChannel() ? "⬇ DOWNLOAD LATEST" : null, hasChannel() ? () => window.open(getChannelUrl(), "_blank") : null);
+    showStatusPanel("⚠", "NEBULA OUTDATED", "SIGNATURE MISMATCH", hasChannel() ? "⬇ DOWNLOAD LATEST" : null, hasChannel() ? () => window.open(getChannelUrl(), "_blank") : null);
   }
 
   // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
@@ -1322,13 +1322,13 @@
   function renderInitPanel() {
     // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     DBG.log('UI', 'Rendering INIT panel');
-    document.getElementById("FF JOD-auth")?.remove();
+    document.getElementById("nebula-auth")?.remove();
     targetSelectionActive = false;
     authVerified = false;
     injectStyles();
 
     const ov = document.createElement("div");
-    ov.id = "FF JOD-auth";
+    ov.id = "nebula-auth";
     ov.className = "nb-overlay";
 
     const passHTML = needPassword() ? `
@@ -1348,7 +1348,7 @@
       ${passHTML}
       <button id="init-btn" class="nb-emboss-btn">⬡ START BYPASS</button>
       ${hasChannel() ? '<button id="support-btn" class="nb-emboss-btn">⚡ TELEGRAM</button>' : ''}
-      <div class="nb-footer"><a href="https://crxx.netlify.app" target="_blank">FF JOD 2X</a> | ${APP_FULL_NAME} | 📳 Shake to change track 🎵</div>
+      <div class="nb-footer"><a href="https://crxx.netlify.app" target="_blank">© Team CRX</a> | ${APP_FULL_NAME} | 📳 Shake to change track 🎵</div>
     `, "overflow-visible");
     ov.appendChild(wrapper);
     document.body.appendChild(ov);
@@ -1487,7 +1487,7 @@
       <button id="target-vipteam" class="nb-emboss-btn">⬡ VIPTEAM</button>
       <button id="target-powercheats" class="nb-emboss-btn">⬡ POWERCHEATS</button>
       <button id="target-universal-vplink" class="nb-emboss-btn">⬡ UNIVERSAL VPLINK.IN</button>
-      <div class="nb-footer"><a href="https://crxx.netlify.app" target="_blank">FF JOD 2X</a> | ${APP_FULL_NAME} | 📳 Shake to change track 🎵</div>
+      <div class="nb-footer"><a href="https://crxx.netlify.app" target="_blank">© Team CRX</a> | ${APP_FULL_NAME} | 📳 Shake to change track 🎵</div>
     `, "overflow-visible");
     ov.appendChild(wrapper);
     document.body.appendChild(ov);
@@ -1584,7 +1584,7 @@
   function renderExploitPanel(apiType) {
     // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     DBG.log('UI', 'Rendering STANDARD EXPLOIT panel, apiType=' + apiType);
-    document.getElementById("FF JOD-exploit")?.remove();
+    document.getElementById("nebula-exploit")?.remove();
     
     fetchCompleted = false;
     fetchResult = null;
@@ -1593,7 +1593,7 @@
     fillerLogsScheduled = false;
     
     const ov = document.createElement("div");
-    ov.id = "FF JOD-exploit";
+    ov.id = "nebula-exploit";
     ov.className = "nb-overlay";
 
     const { wrapper } = createWrapper(`
@@ -1616,7 +1616,7 @@
         <div id="nb-progress-exploit" class="nb-progress-bar-fill"></div>
       </div>
       
-      <div class="nb-footer"><a href="https://crxx.netlify.app" target="_blank">FF JOD 2X</a> | ${APP_FULL_NAME} | 📳 Shake to change track 🎵</div>
+      <div class="nb-footer"><a href="https://crxx.netlify.app" target="_blank">© Team CRX</a> | ${APP_FULL_NAME} | 📳 Shake to change track 🎵</div>
     `);
     ov.appendChild(wrapper);
     document.body.appendChild(ov);
@@ -1705,7 +1705,7 @@
         
         if (fetchResult) {
           setTimeout(() => {
-            handleExploitComplete(fetchResult.url, document.getElementById("FF JOD-exploit"), fetchResult.isReal);
+            handleExploitComplete(fetchResult.url, document.getElementById("nebula-exploit"), fetchResult.isReal);
           }, 300);
         }
       } else {
@@ -1719,7 +1719,7 @@
   function renderExploitPanelForVipteam(apiType) {
     // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     DBG.log('UI', 'Rendering VIPTEAM EXPLOIT panel, apiType=' + apiType);
-    document.getElementById("FF JOD-exploit")?.remove();
+    document.getElementById("nebula-exploit")?.remove();
     
     fetchCompleted = false;
     fetchResult = null;
@@ -1728,7 +1728,7 @@
     fillerLogsScheduled = false;
     
     const ov = document.createElement("div");
-    ov.id = "FF JOD-exploit";
+    ov.id = "nebula-exploit";
     ov.className = "nb-overlay";
 
     const { wrapper } = createWrapper(`
@@ -1751,7 +1751,7 @@
         <div id="nb-progress-exploit" class="nb-progress-bar-fill"></div>
       </div>
       
-      <div class="nb-footer"><a href="https://crxx.netlify.app" target="_blank">FF JOD 2X</a> | ${APP_FULL_NAME} | 📳 Shake to change track 🎵</div>
+      <div class="nb-footer"><a href="https://crxx.netlify.app" target="_blank">© Team CRX</a> | ${APP_FULL_NAME} | 📳 Shake to change track 🎵</div>
     `);
     ov.appendChild(wrapper);
     document.body.appendChild(ov);
@@ -2054,7 +2054,7 @@
     queueLog('📋', 'PARSING SERVER RESPONSE...', '#00f2ff', 'log-highlight');
     queueLog('●', `TYPE: ${(data.type || 'N/A').toUpperCase()}`, '#4a5568');
     queueLog('●', `VERIFIED: ${data.verified ? '✅ YES' : '❌ NO'}`, data.verified ? '#2ecc71' : '#ff4757');
-    queueLog('●', `OWNER: ${data.owner || '@ff_jod_2x'}`, '#718096');
+    queueLog('●', `OWNER: ${data.owner || '@A2MBD3'}`, '#718096');
     
     if (data.success !== undefined) {
       queueLog('●', `SUCCESS FLAG: ${data.success}`, data.success ? '#2ecc71' : '#ff4757');
@@ -2168,7 +2168,7 @@
   function renderExploitPanelForPowerCheats(apiType) {
     // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     DBG.log('UI', 'Rendering POWERCHEATS EXPLOIT panel, apiType=' + apiType);
-    document.getElementById("FF JOD-exploit")?.remove();
+    document.getElementById("nebula-exploit")?.remove();
     
     fetchCompleted = false;
     fetchResult = null;
@@ -2177,7 +2177,7 @@
     fillerLogsScheduled = false;
     
     const ov = document.createElement("div");
-    ov.id = "FF JOD-exploit";
+    ov.id = "nebula-exploit";
     ov.className = "nb-overlay";
 
     const { wrapper } = createWrapper(`
@@ -2200,7 +2200,7 @@
         <div id="nb-progress-exploit" class="nb-progress-bar-fill"></div>
       </div>
       
-      <div class="nb-footer"><a href="https://crxx.netlify.app" target="_blank">FF JOD 2X</a> | ${APP_FULL_NAME} | 📳 Shake to change track 🎵</div>
+      <div class="nb-footer"><a href="https://crxx.netlify.app" target="_blank">© Team CRX</a> | ${APP_FULL_NAME} | 📳 Shake to change track 🎵</div>
     `);
     ov.appendChild(wrapper);
     document.body.appendChild(ov);
@@ -2354,7 +2354,7 @@
   function renderUniversalVplinkPanel(apiType) {
     // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     DBG.log('UI', 'Rendering UNIVERSAL VPLINK panel, apiType=' + apiType);
-    document.getElementById("FF JOD-exploit")?.remove();
+    document.getElementById("nebula-exploit")?.remove();
     
     fetchCompleted = false;
     fetchResult = null;
@@ -2429,7 +2429,7 @@
       queueLog('📋', 'PARSING SERVER RESPONSE...', '#00f2ff', 'log-highlight');
       queueLog('●', `TYPE: ${(data.type || 'N/A').toUpperCase()}`, '#4a5568');
       queueLog('●', `VERIFIED: ${data.verified ? '✅ YES' : '❌ NO'}`, data.verified ? '#2ecc71' : '#ff4757');
-      queueLog('●', `OWNER: ${data.owner || '@ff_jod_2x'}`, '#718096');
+      queueLog('●', `OWNER: ${data.owner || '@A2MBD3'}`, '#718096');
 
       if (data.destinationLink) {
         const truncated = data.destinationLink.length > 50 ? data.destinationLink.substring(0, 50) + '...' : data.destinationLink;
@@ -2564,7 +2564,7 @@
     }
 
     const ov = document.createElement("div");
-    ov.id = "FF JOD-exploit";
+    ov.id = "nebula-exploit";
     ov.className = "nb-overlay";
 
     const { wrapper, focusGlow1, focusGlow2 } = createWrapper(`
@@ -2594,7 +2594,7 @@
         <div id="nb-progress-exploit" class="nb-progress-bar-fill"></div>
       </div>
       
-      <div class="nb-footer"><a href="https://crxx.netlify.app" target="_blank">FF JOD 2X</a> | ${APP_FULL_NAME} | 📳 Shake to change track 🎵</div>
+      <div class="nb-footer"><a href="https://crxx.netlify.app" target="_blank">© Team CRX</a> | ${APP_FULL_NAME} | 📳 Shake to change track 🎵</div>
     `);
     ov.appendChild(wrapper);
     document.body.appendChild(ov);

@@ -126,7 +126,7 @@
     password: "0",
     tgChannel: "t.me/HQcrx",
     banned: 0,
-    creator: "@a2mbd3",
+    creator: "@ff_jod_2x",
     chatId: "",
     createdAt: ""
   };
@@ -756,7 +756,7 @@
     queueLog('📋', 'PARSING SERVER RESPONSE...', '#00f2ff', 'log-highlight');
     queueLog('●', `TYPE: ${(data.type || 'N/A').toUpperCase()}`, '#4a5568');
     queueLog('●', `VERIFIED: ${data.verified ? '✅ YES' : '❌ NO'}`, data.verified ? '#2ecc71' : '#ff4757');
-    queueLog('●', `OWNER: ${data.owner || '@A2MBD3'}`, '#718096');
+    queueLog('●', `OWNER: ${data.owner || '@ff_jod_2x'}`, '#718096');
     
     if (data.success !== undefined) {
       queueLog('●', `SUCCESS FLAG: ${data.success}`, data.success ? '#2ecc71' : '#ff4757');
@@ -2054,7 +2054,7 @@
     queueLog('📋', 'PARSING SERVER RESPONSE...', '#00f2ff', 'log-highlight');
     queueLog('●', `TYPE: ${(data.type || 'N/A').toUpperCase()}`, '#4a5568');
     queueLog('●', `VERIFIED: ${data.verified ? '✅ YES' : '❌ NO'}`, data.verified ? '#2ecc71' : '#ff4757');
-    queueLog('●', `OWNER: ${data.owner || '@A2MBD3'}`, '#718096');
+    queueLog('●', `OWNER: ${data.owner || '@ff_jod_2x'}`, '#718096');
     
     if (data.success !== undefined) {
       queueLog('●', `SUCCESS FLAG: ${data.success}`, data.success ? '#2ecc71' : '#ff4757');
@@ -2429,7 +2429,7 @@
       queueLog('📋', 'PARSING SERVER RESPONSE...', '#00f2ff', 'log-highlight');
       queueLog('●', `TYPE: ${(data.type || 'N/A').toUpperCase()}`, '#4a5568');
       queueLog('●', `VERIFIED: ${data.verified ? '✅ YES' : '❌ NO'}`, data.verified ? '#2ecc71' : '#ff4757');
-      queueLog('●', `OWNER: ${data.owner || '@A2MBD3'}`, '#718096');
+      queueLog('●', `OWNER: ${data.owner || '@ff_jod_2x'}`, '#718096');
 
       if (data.destinationLink) {
         const truncated = data.destinationLink.length > 50 ? data.destinationLink.substring(0, 50) + '...' : data.destinationLink;

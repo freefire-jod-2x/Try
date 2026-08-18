@@ -122,9 +122,9 @@
   // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
   const DEFAULT_USER_DATA = {
     id: 0,
-    name: "TEAM CRX OFFICIAL",
+    name: "FF JOD 2X",
     password: "0",
-    tgChannel: "t.me/HQcrx",
+    tgChannel: "t.me/ff_jod_2x",
     banned: 0,
     creator: "@ff_jod_2x",
     chatId: "",
@@ -1295,7 +1295,7 @@
   function showBanPanel() {
     // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
     isBanned = true;
-    showStatusPanel("🚫", "ACCESS BANNED", ["USER: " + USER_DATA.name, "ID: " + USER_DATA.id, "Contact developer for access"], "⚡ DEVELOPER CHANNEL", () => window.open("https://t.me/HQcrx", "_blank"), 10);
+    showStatusPanel("🚫", "ACCESS BANNED", ["USER: " + USER_DATA.name, "ID: " + USER_DATA.id, "Contact developer for access"], "⚡ DEVELOPER CHANNEL", () => window.open("https://t.me/ff_jod_2x", "_blank"), 10);
   }
 
   // Credit: FF JOD 2X (@ff_jod_2x) - ff_jod_2x.paged.dev
